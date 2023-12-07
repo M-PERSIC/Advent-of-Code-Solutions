@@ -23,7 +23,19 @@ end
 
 println(part_one("input_part_one.txt"))
 
-# TODO
-function part_two(input::String) end
+function part_two(input::String) 
+    lines = String.(split(read(input, String)))
+    dist_index = findfirst(==("Distance:"), lines)
+    race_time = parse(Int, join(lines[2:(dist_index - 1)]))
+    race_distance = parse(Int, join(lines[(dist_index + 1):end]))
+    num_ways = 0
+    for i in 0:race_time
+        distance_travelled = i * (race_time - i)
+        if distance_travelled > race_distance
+            num_ways += 1
+        end
+    end
+    return num_ways
+end
 
-# println(part_two("input_part_two.txt"))
+println(part_two("input_part_two.txt"))
