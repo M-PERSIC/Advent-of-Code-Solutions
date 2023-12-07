@@ -8,7 +8,7 @@
 function part_one(input::String)
     race_times = parse.(Int, String.(split(split(split(read(input, String), "\n")[1], ":")[2])))
     race_distances = parse.(Int, String.(split(split(split(read(input, String), "\n")[2], ":")[2])))
-    num_ways = Vector{Int}(undef, length(race_times))
+    num_ways = zeros(Int, length(race_times))
     for (race, race_time) in enumerate(race_times)
         for i in 0:race_time
             distance_travelled = i * (race_time - i)
