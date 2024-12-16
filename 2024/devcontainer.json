@@ -1,5 +1,7 @@
 {
-	"image": "docker.io/denoland/deno:ubuntu-2.1.4",
+	"build": {
+		"dockerfile": "Containerfile"
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
@@ -14,7 +16,7 @@
 				"editor.formatOnSave": true,
 				"editor.defaultFormatter": "denoland.vscode-deno",
 				"terminal.integrated.defaultProfile.linux": "bash",
-                "terminal.integrated.profiles.linux": { "bash": { "path": "/bin/bash" } }
+				"terminal.integrated.profiles.linux": { "bash": { "path": "/bin/bash" } }
 			}
 		}
 	}
