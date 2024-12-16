@@ -1,0 +1,22 @@
+{
+	"image": "docker.io/denoland/deno:ubuntu-2.1.4",
+	"workspaceFolder": "${containerWorkspaceFolder}/2024",
+	"features": {
+    	"ghcr.io/devcontainers/features/common-utils:2": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	}
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"deno.enable": true,
+				"deno.lint": true,
+				"editor.formatOnSave": true,
+				"[typescript]": { "editor.defaultFormatter": "denoland.vscode-deno" }
+			}	        		
+	    },
+	    "extensions": [
+	    	"eamodio.gitlens",
+	    	"denoland.vscode-deno"
+	    ],
+	},
+}
