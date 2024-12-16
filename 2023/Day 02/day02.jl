@@ -1,4 +1,5 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MIT-0
+# License-Filename: LICENSE
 
 # Advent of Code 2023
 # --- Day 2: Cube Conundrum ---
