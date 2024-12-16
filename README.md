@@ -1,4 +1,4 @@
-# Advent of Code 2023
+# Advent of Code Solutions
 
-Advent of Code 2023 solutions written in Julia 1.9. Available under the MIT license.
+Various Advent of Code solutions. Available under the MIT-0 license.
 
