@@ -1,7 +1,6 @@
 {
-	"build": {
-		"dockerfile": "Containerfile"
-	},
+	"name": "2024",
+	"image": "docker.io/denoland/deno:ubuntu-2.1.4",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
