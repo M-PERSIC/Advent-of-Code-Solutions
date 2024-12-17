@@ -7,16 +7,23 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-	    	"eamodio.gitlens",
-	    	"denoland.vscode-deno"
+				"eamodio.gitlens",
+				"denoland.vscode-deno"
 			],
 			"settings": {
 				"deno.enable": true,
 				"editor.formatOnSave": true,
 				"editor.defaultFormatter": "denoland.vscode-deno",
 				"terminal.integrated.defaultProfile.linux": "bash",
-				"terminal.integrated.profiles.linux": { "bash": { "path": "/bin/bash" } }
+				"terminal.integrated.profiles.linux": {
+					"bash": { "path": "/bin/bash" }
+				}
 			}
 		}
-	}
+	},
+	"runArgs": [
+		"--userns=keep-id",
+		"--security-opt",
+		"label=disable"
+	]
 }
