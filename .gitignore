@@ -44,3 +44,6 @@ src/**/*.txt
 
 # Devpod
 .devpod-internal/
+
+# Input files
+input.txt

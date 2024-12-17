@@ -1,13 +1,13 @@
 {
-	"name": "2023",
+    "name": "2023",
     "features": {
         "ghcr.io/julialang/devcontainer-features/julia:1": {
             "channel": "1.9"
         }
     },
-	"containerEnv": {
-		"JULIA_PROJECT": "${containerWorkspaceFolder}/2023"
-	},
+    "containerEnv": {
+        "JULIA_PROJECT": "${containerWorkspaceFolder}/2023"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
