@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT-0
 // License-Filename: LICENSE
 
-function part_one(input: string) {
+function part_one(input: string): number {
   const text = Deno.readTextFileSync(input);
   const rows: number[][] = [];
   for (const line of text.split(/\n/)) {
@@ -35,7 +35,7 @@ function part_one(input: string) {
 
 console.log(part_one("./Day02/input.txt"));
 
-function part_two(input: string) {
+function part_two(input: string): number {
   const text = Deno.readTextFileSync(input);
   const rows: number[][] = [];
   for (const line of text.split(/\n/)) {

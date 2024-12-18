@@ -5,6 +5,7 @@
   "tasks": {
     "scratch": "deno run --check scratch.ts",
     "one": "deno run --check --allow-read=./Day01/input.txt ./Day01/day01.ts",
-    "two": "deno run --check --allow-read=./Day02/input.txt ./Day02/day02.ts"
+    "two": "deno run --check --allow-read=./Day02/input.txt ./Day02/day02.ts",
+    "three": "deno run --check --allow-read=./Day03/input.txt ./Day03/day03.ts"
   }
 }
