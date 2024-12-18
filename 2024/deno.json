@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["ES2023"]
+    "lib": ["es2023", "deno.ns", "dom"]
   },
   "tasks": {
+    "scratch": "deno run --check scratch.ts",
     "one": "deno run --check --allow-read=./Day01/input.txt ./Day01/day01.ts"
   }
 }

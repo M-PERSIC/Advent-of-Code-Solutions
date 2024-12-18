@@ -1,17 +1,37 @@
 // SPDX-License-Identifier: MIT-0
 // License-Filename: LICENSE
 
-// Deno.args[0];
+function part_one(input: string): number {
+  const text = Deno.readTextFileSync(input);
+  const rows: number[][] = [];
+  for (const line of text.split(/\n/)) {
+    rows.push(line.split("   ").map((num) => parseInt(num)));
+  }
+  const left = rows.flat().filter((_, index) => index % 2 === 0).sort();
+  const right = rows.flat().filter((_, index) => index % 2 !== 0).sort();
+  let distance = 0;
+  for (const index in left) {
+    distance += Math.abs(left[index] - right[index]);
+  }
+  return distance;
+}
 
-// https://docs.deno.com/examples/reading_files/
+console.log(part_one("./Day01/input.txt"));
 
-// function part_one(): {};
+function part_two(input: string): number {
+  const text = Deno.readTextFileSync(input);
+  const rows: number[][] = [];
+  for (const line of text.split(/\n/)) {
+    rows.push(line.split("   ").map((num) => parseInt(num)));
+  }
+  const left = rows.flat().filter((_, index) => index % 2 === 0);
+  const right = rows.flat().filter((_, index) => index % 2 !== 0);
+  let similarity = 0;
+  for (const index in left) {
+    similarity += left[index] *
+      right.filter((num) => num === left[index]).length;
+  }
+  return similarity;
+}
 
-let input: string = `3   4
-4   3
-2   5
-1   3
-3   9
-3   3`;
-
-console.log(input);
+console.log(part_two("./Day01/input.txt"));
