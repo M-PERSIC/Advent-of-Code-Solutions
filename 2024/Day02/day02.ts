@@ -41,7 +41,7 @@ function part_two(input: string) {
   for (const line of text.split(/\n/)) {
     rows.push(line.split(" ").map((num) => parseInt(num)));
   }
-  const hasUnsafe = (row: number[]): [boolean, number] => {
+  const hasUnsafe = (row: number[]): boolean => {
     let isIncreasing = false;
     let isDecreasing = false;
     for (let level = 0; level < row.length; level++) {
@@ -53,25 +53,25 @@ function part_two(input: string) {
           (Math.abs(row[level] - row[level + 1]) < 1) ||
           (isIncreasing && isDecreasing)
         ) {
-          return [true, level];
+          return true;
         }
       } else {
         if (isIncreasing && isDecreasing) {
-          return [true, level];
+          return true;
         }
       }
     }
-    return [false, -1];
+    return false;
   };
   let safe = 0;
   for (const row of rows) {
     const firstAttempt = hasUnsafe(row);
-    if (firstAttempt[0] === true) {
+    if (firstAttempt === true) {
       let secondAttempt = false;
       for (let index = 0; index < row.length; index++) {
         secondAttempt = hasUnsafe(
             row.slice(0, index).concat(row.slice(index + 1, row.length)),
-          )[0] === false
+          ) === false
           ? true
           : secondAttempt;
       }
