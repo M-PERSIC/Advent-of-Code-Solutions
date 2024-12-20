@@ -7,6 +7,7 @@
     "one": "deno run --check --allow-read=./Day01/input.txt ./Day01/day01.ts",
     "two": "deno run --check --allow-read=./Day02/input.txt ./Day02/day02.ts",
     "three": "deno run --check --allow-read=./Day03/input.txt ./Day03/day03.ts",
-    "four": "deno run --check --allow-read=./Day04/input.txt ./Day04/day04.ts"
+    "four": "deno run --check --allow-read=./Day04/input.txt ./Day04/day04.ts",
+    "five": "deno run --check --allow-read=./Day05/input.txt ./Day05/day05.ts"
   }
 }
