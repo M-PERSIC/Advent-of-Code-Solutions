@@ -1,0 +1,30 @@
+{
+  "name": "2024",
+  "image": "docker.io/denoland/deno:ubuntu-2.1.4",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "denoland.vscode-deno"
+      ],
+      "settings": {
+        "deno.enable": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "denoland.vscode-deno",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": { "path": "/bin/bash" }
+        },
+        "workbench.colorTheme": "Default Dark+"
+      }
+    }
+  },
+  "runArgs": [
+    "--userns=keep-id",
+    "--security-opt",
+    "label=disable"
+  ]
+}
